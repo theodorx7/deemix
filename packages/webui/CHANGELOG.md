@@ -1,5 +1,15 @@
 # deemix-webui
 
+## 4.8.0
+
+### Minor Changes
+
+- 540da1c: Support serving the web UI under a base path without any configuration: asset URLs are emitted document-relative and the mount prefix is derived client-side from the document URL, so the app works behind a reverse proxy subfolder and in any other prefix-mounting setup. Serving from the root keeps the previous behavior.
+
+### Patch Changes
+
+- 336e1e3: Store the selected theme under a dedicated `deemix-selectedTheme` localStorage key instead of the unnamespaced `selectedTheme`, which other applications embedded on the same origin may also occupy - leaving the embedded UI without any theme.
+
 ## 4.7.0
 
 ### Minor Changes
